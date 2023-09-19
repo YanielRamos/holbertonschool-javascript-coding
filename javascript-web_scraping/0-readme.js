@@ -3,10 +3,18 @@
 
 const fs = require('fs');
 
-fs.readFile(process.argv[2], 'utf-8', (err, text) => {
+
+if (process.argv.length !== 3) {
+  console.error('Usage: node 0-readme.js <file_path>');
+  process.exit(1);
+}
+
+const filePath = process.argv[2];
+
+fs.readFile(filePath, 'utf-8', (err, data) => {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
-    console.log(text.toString().trim());
+    console.log(data);
   }
 });
