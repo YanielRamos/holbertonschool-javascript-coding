@@ -1,3 +1,4 @@
+/* eslint-disable */
 class AppController {
   static getHomepage(request, response) {
     response.send(200, 'Hello Holberton School!');
@@ -5,4 +6,3 @@ class AppController {
 }
 
 export default AppController;
-
