@@ -1,4 +1,7 @@
 /* eslint-disable */
-const displayMessage = require('./0-console');
-
-displayMessage('Hello NodeJS!');
+function displayMessage(string) {
+    console.log(string);
+  }
+  
+  module.exports = displayMessage;
+  
